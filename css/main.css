@@ -262,12 +262,16 @@ body{
     color: #fff;
     width: 180px;
     padding: 4px 10px;
+    
     margin-bottom: 30px;
     /* margin-left: 300px; */
     display: flex;
 }
 .title h2 {
-    font-size: 24px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Tangerine', serif;
+    /* font-size: 100px; */
 }
 
 .title::after{
@@ -337,3 +341,48 @@ body{
     font-size: 15px;
     padding-bottom: 10px;
 }
+
+/* -----------------------------website features ---------------- */
+.website-features{
+    margin: 50px 0 50px 40px;
+    padding: 60px 300px 60px 300px; 
+    position: relative;
+    background: #f7f4f4;
+    z-index: -1;
+}
+
+.featured-box {
+    width: 30% !important;
+}
+
+@media only screen and (max-width: 980px){
+    .website-features{
+        padding: 0 0 0 0;
+        margin:0 20px 0 20px;
+    }
+  }
+
+ #action-button{
+    background: orange;
+    color: #fff;
+    width: 180px;
+    padding: 4px 10px;
+    font-family: 'Tangerine', serif;
+    font-size: 40px;
+    font-weight: bold;
+    border: 0 solid black;
+    /* margin-bottom: 30px; */
+    /* margin-left: 300px; */
+    border-radius:10%;
+    display: flex;
+    cursor: pointer;
+ } 
+ .website-features h4{
+    color: orange;
+    font-family: 'Courier New', Courier, monospace;
+ }
+
+  #easy-to-use, #easy-ordering, #we-partner{
+     margin-bottom: 30px !important;
+     font-family: 'Courier New', Courier, monospace;
+ }
