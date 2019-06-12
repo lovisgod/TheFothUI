@@ -505,6 +505,15 @@ body{
 .single-product{
     margin-top: 70px;
 }
+
+.single-product .fa-star{
+    color:orange;
+}
+
+.single-product .btn-primary{
+    background: orange !important;
+    color: #fff !important;
+}
 .Welcome{
     background:orange;
     width: fit-content;
@@ -513,4 +522,17 @@ body{
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
+}
+
+/* --------------------------------product description ------------------ */
+
+.product-description{
+    margin: 50px 0 50px 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.product-description h5 {
+    font-family: 'Courier New', Courier, monospace;
+    color: orange;
+    margin: 30px 0 30px 0;
 }
