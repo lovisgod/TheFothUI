@@ -16,6 +16,8 @@ const closemenu = () => {
   document.getElementById("close-btn").style.display = "none";
 };
 
+
+//handle admin side menu 
 const getUrl = e => {
   var stationName = e.target.textContent;
   switch (stationName) {
@@ -85,61 +87,84 @@ const getUrl = e => {
   }
 };
 
+
+
+// login method
 const login = document.querySelector("#login-btn");
 login.addEventListener("click", () => {
-  document.querySelector(".login-area").style.display = "none";
-  document.getElementById("service").style.display = "block";
-  document.getElementById("footer-admin").style.display = "block";
-  // this checks if browser is mobile
-  if (
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  ) {
-    // some code..
-    document.getElementById("side-menu").style.display = "none";
-  } else {
-    document.getElementById("side-menu").style.display = "block";
-  }
+  const username = document.getElementById("username-input").value;
+  const password = document.getElementById("password-input").value;
+  loginIn.handleLogin(username, password);
+        alert('Successfully Logged In');
+        document.querySelector(".login-area").style.display = "none";
+        document.getElementById("service").style.display = "block";
+        document.getElementById("footer-admin").style.display = "block";
+        // this checks if browser is mobile
+        if (
+          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+            navigator.userAgent
+          )
+        ) {
+          // some code..
+          document.getElementById("side-menu").style.display = "none";
+        } else {
+          document.getElementById("side-menu").style.display = "block";
+        }
 });
 
+
+
+// Add service here 
 const submit = document.querySelector("#btn-submitService");
 submit.addEventListener("click", () => {
+  const serviceName =document.getElementById('sname').value;
+  const serviceMobile = document.getElementById('phone').value;
+  const serviceAddress = document.getElementById('address').value;
+  const serviceCity = document.getElementById('city').value;
+  const serviceCategory = document.getElementById('category').value;
+  const serviceLogo = document.getElementById('logo-image').files[0];
+  const serviceCover = document.getElementById('cover-image').files[0];
+  const serviceDetails = document.getElementById('details').value;
+  
+  console.log(serviceLogo);
+  console.log(serviceCover);
+  console.log(serviceName);
   document.getElementById("service").style.display = "none";
   document.getElementById("admin-categories").style.display = "block";
 });
+
+
+
+// this handle clicks for li
 
 for (var i = 0; i < Flist.length; i++) {
   console.log(Flist[i]);
   Flist[i].addEventListener("click", getUrl);
 }
 
-
 //set image to the placeHolder
 function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
 
-        reader.onload = function (e) {
-            document.getElementById('blah')
-                .src = e.target.result;
-        };
+    reader.onload = function(e) {
+      document.getElementById("blah").src = e.target.result;
+    };
 
-        reader.readAsDataURL(input.files[0]);
-    }
+    reader.readAsDataURL(input.files[0]);
+  }
 }
 
 // set image for the cover placeholder
 
 function readURLTwo(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
 
-        reader.onload = function (e) {
-            document.getElementById('blah2')
-                .src = e.target.result;
-        };
+    reader.onload = function(e) {
+      document.getElementById("blah2").src = e.target.result;
+    };
 
-        reader.readAsDataURL(input.files[0]);
-    }
+    reader.readAsDataURL(input.files[0]);
+  }
 }
