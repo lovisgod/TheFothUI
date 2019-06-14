@@ -34,6 +34,8 @@ const getUrl = e => {
       }
       document.getElementById("service").style.display = "block";
       document.getElementById("admin-categories").style.display = "none";
+      document.getElementById("add-serviceTitle").innerHTML =
+        "ADMIN ADD SERVICE";
       break;
     case "Service":
       document.querySelector(".login-area").style.display = "none";
