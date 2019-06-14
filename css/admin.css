@@ -469,6 +469,11 @@
   #admin-categories {
       margin-bottom: 28%;
   }
+
+  #btn-submitService {
+    width: 300px;
+    background: orange;
+  }
   
   @media only screen and (max-width: 980px) {
       .service-area{
@@ -483,5 +488,9 @@
   
       .footer-admin {
           width: 100%;
+        }
+        #btn-submitService {
+          width: 100px;
+          background: orange;
         }
     }
