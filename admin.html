@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <title>TheFoth</title>
+</head>
+
+<body>
+    <div class="top-nav-bar-admin">
+        <div class="search-box">
+            <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
+            <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
+
+            <h3 id="logo-admin">TheFoth</h3>
+            <!-- <input type="text" class="form-control">
+            <span class="input-group-text"><i class="fa fa-search"></i></span> -->
+        </div>
+        <!-- <div class="menu-bar">
+            <ul>
+                <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">How</a></li>
+            </ul>
+        </div> -->
+    </div>
+
+
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li>Add Service</li>
+            <li>Service</li>
+            <li>Update Service</li>
+            <li>Log Out</li>
+        </ul>
+    </div>
+
+    <section class="login-area">
+        <div class="login-container">
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button class="login-btn" id="login-btn" type="submit">Login</button>
+        </div>
+
+    </section>
+
+
+    <section class="service-area" id="service">
+        <div class="add-service" id="add-service">
+            <div class="service-form">
+                    <h3>ADMIN ADD SERVICE</h3>
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="sname">Name</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="sname" placeholder="Service's name" class="input-delivery">
+                    </div>
+                </div><br />
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="phone">Mobile Number</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="phone" placeholder="Service's Mobile Number" class="input-delivery">
+                    </div>
+                </div><br />
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="address">Address</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="address" placeholder="Service's Address" class="input-delivery">
+                    </div>
+                </div><br />
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="city">City</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="city" placeholder="Service's City" class="input-delivery">
+                    </div>
+                </div><br />
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="category">Category</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="category" placeholder="Service's Category" class="input-delivery">
+                    </div>
+                </div><br />
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="logo">Logo</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="logo" placeholder="Logo" class="input-delivery">
+                    </div>
+                </div><br />
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="cover">Cover</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="cover" placeholder="Cover" class="input-delivery">
+                    </div>
+                </div><br />
+                <div class="form-item">
+                    <div class="form-label">
+                        <label for="details">Details</label>
+                    </div>
+                    <div class="form-field">
+                        <input type="text" id="details" placeholder="Service Details" class="input-delivery">
+                    </div>
+                    <div class="form-field">
+                            <input type="button" id="btn-submitService" value="SUBMIT" class="input-delivery">
+                    </div>
+                </div><br />
+
+            </div>
+        </div>
+    </section>
+
+       <!------------------Featured Images----------------------->
+       <section class="featured-categories" id="admin-categories">
+            <!-- <h2 id="featured-categories-title" class="text-center"> Featured Categories</h2> -->
+            <div class="container-fluid">
+                <div class="title">
+                    <h2 class="text-center">TheFoth Services</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                    <div class="col-md-3">
+                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    <!--------------------------------------- Footers ---------------------------------->
+    <section class="footer footer-admin" id="footer-admin">
+        <div class="container">
+            <hr>
+            <p class="copyright"> <i class="fa fa-copyright"></i>Made By Psirius Koncept For TheFoth</p>
+        </div>
+
+    </section>
+
+   
+</body>
+<script src="./js/admin.js"></script>
+</html>
