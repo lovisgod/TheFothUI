@@ -187,16 +187,16 @@
       text-align: center;
       height: fit-content !important;
     }
-    .side-menu ul li ul {
+    /* .side-menu ul li ul {
       top: 133px;
-    }
+    } */
     #menu-btn {
       display: block;
     }
     .side-menu ul li {
       height: 30px;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 20px;
+      font-family: serif,'Courier New', Courier, monospace;
+      font-size: 10px;
       cursor: pointer;
       
   }
