@@ -113,3 +113,33 @@ for (var i = 0; i < Flist.length; i++) {
   console.log(Flist[i]);
   Flist[i].addEventListener("click", getUrl);
 }
+
+
+//set image to the placeHolder
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            document.getElementById('blah')
+                .src = e.target.result;
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+// set image for the cover placeholder
+
+function readURLTwo(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            document.getElementById('blah2')
+                .src = e.target.result;
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}

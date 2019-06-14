@@ -105,7 +105,8 @@
                         <label for="logo">Logo</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" id="logo" placeholder="Logo" class="input-delivery">
+                        <input type="file" name="pic" accept="image/*" onchange="readURL(this);">
+                        <img id="blah" src="http://placehold.it/180" alt="service logo" />
                     </div>
                 </div><br />
                 <div class="form-item">
@@ -113,7 +114,8 @@
                         <label for="cover">Cover</label>
                     </div>
                     <div class="form-field">
-                        <input type="text" id="cover" placeholder="Cover" class="input-delivery">
+                        <input type="file" name="pic" accept="image/*" onchange="readURLTwo(this);">
+                        <img id="blah2" src="http://placehold.it/180" alt="service cover image" />
                     </div>
                 </div><br />
                 <div class="form-item">

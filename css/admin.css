@@ -494,3 +494,8 @@
           background: orange;
         }
     }
+
+  #blah, #blah2{
+    width: 150px !important;
+    height: 200px !important;
+  }
