@@ -8,7 +8,7 @@ const DoWork = function(){
             method:'GET',
 
         };
-        fetch(`http://127.0.0.1:3500/api/v1/services/category?category=${category}`, listOptions)
+        fetch(`https://thefoth.herokuapp.com/api/v1/services/category?category=${category}`, listOptions)
         .then((res) => res.json())
         .then((datas) => {
             let layout = '';
