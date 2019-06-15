@@ -39,18 +39,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5">
-                    <img class="product-image" src="images/laundary.jpg">
+                    <img class="product-image" id="service-image" src="images/laundary.jpg">
                 </div>
                 <div class="col-md-7">
                     <h3 class="Welcome text-center">Welcome To</h3>
-                    <h2>Laundary ABC Company Incoporation</h2>
-                    <p><b>Category:</b>Laundary</p>
+                    <h2 id="service-name">Laundary ABC Company Incoporation</h2>
+                    <p><b>Category:</b><span id="service-category">Laundary</span></p>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star-half-o"></i>
-                    <p id="call-service">08165656988<span><button type="button" class="btn btn-primary"><i
+                    
+                    <p id="call-service"><span id="phone-number">08165656988</span><span><button type="button" class="btn btn-primary"><i
                                     class="fa fa-phone"></i></button></span></p>
 
                 </div>
@@ -68,15 +69,10 @@
                 but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in
                 the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
                 desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-                software like Aldus PageMaker including versions of Lorem Ipsum</p>
         </div>
         <hr>
+
+        <!----------------------------------- Related Category ---------------------------->
         <div class="container">
             <div class="title">
                 <h2 class="text-center">Related Services</h2>
@@ -211,6 +207,9 @@
     </section>
 
     <script src="./js/index.js"></script>
+    <script src="./js/fetchSingle.js"></script>
+    <script src="./js/singleService.js"></script>
+    <script src="./js/fetchIndex.js"></script>
 </body>
 
 </html>

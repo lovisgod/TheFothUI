@@ -17,6 +17,13 @@ const reloadPage = () => {
     document.location.reload(true);
 }
 
+const getElementId =(a) => {
+    const id= a.id;
+    localStorage.setItem('id', id);
+    window.location.href='product_details.html';
+    console.log(id);
+}
+
 const getUrl = e => {
   const stationName = e.target.textContent;
 //   console.log(stationName);
@@ -44,6 +51,7 @@ const getUrl = e => {
     case "Artisans":
       console.log(stationName);
       document.getElementById('fill-category').innerHTML = '';
+      document.location.reload(true);
       DoWork.listServices(stationName);
       break;
     default:
@@ -52,6 +60,23 @@ const getUrl = e => {
   }
 };
 
+
+
 for (var i = 0; i < Flist.length; i++) {
   Flist[i].addEventListener("click", getUrl);
+}
+
+//get the id of each service
+let getId = (id) => {
+    console.log(id);
+    localStorage.setItem('id', id);
+    window.location.href = "product_details.html";
+}
+
+var Slist = document.getElementsByClassName("service-click");
+for (var j = 0; j< Slist.length; j++){
+    const id = Slist[j].id;
+    console.log(id);
+    Slist[j].addEventListener('click', function (){getId(id)});
+    console.log(Slist[j].id);
 }
