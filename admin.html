@@ -46,9 +46,9 @@
 
     <section class="login-area">
         <div class="login-container">
-            <input type="text" placeholder="Enter Username" name="uname" required>
+            <input type="text" id="username-input" placeholder="Enter Username" name="username">
 
-            <input type="password" placeholder="Enter Password" name="psw" required>
+            <input type="password" id="password-input" placeholder="Enter Password" name="password">
 
             <button class="login-btn" id="login-btn" type="submit">Login</button>
         </div>
@@ -105,7 +105,7 @@
                         <label for="logo">Logo</label>
                     </div>
                     <div class="form-field">
-                        <input type="file" name="pic" accept="image/*" onchange="readURL(this);">
+                        <input type="file" id="logo-image" name="pic" accept="image/*" onchange="readURL(this);">
                         <img id="blah" src="http://placehold.it/180" alt="service logo" />
                     </div>
                 </div><br />
@@ -114,7 +114,7 @@
                         <label for="cover">Cover</label>
                     </div>
                     <div class="form-field">
-                        <input type="file" name="pic" accept="image/*" onchange="readURLTwo(this);">
+                        <input type="file" id="cover-image" name="pic" accept="image/*" onchange="readURLTwo(this);">
                         <img id="blah2" src="http://placehold.it/180" alt="service cover image" />
                     </div>
                 </div><br />
@@ -141,95 +141,8 @@
                 <div class="title">
                     <h2 class="text-center">TheFoth Services</h2>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="#"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
+                <div class="row" id="filled">
+                   
                 </div>
             </div>
 
@@ -248,4 +161,5 @@
    
 </body>
 <script src="./js/admin.js"></script>
+<script src="./js//fetch.js"></script>
 </html>
