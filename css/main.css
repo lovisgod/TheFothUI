@@ -277,8 +277,9 @@ body {
   margin-left: 80px;
   margin-right: 20px;
   margin-top: 20px;
+  margin-bottom: 30px;
   padding: 0 300px 0 300px;
-  position: relative;
+  /* position: relative; */
 }
 
 .featured-categories img {
@@ -297,6 +298,12 @@ body {
     padding: 0 0 0 0;
     margin: 10px 10px 10px 10px;
   }
+
+  .header {
+    width: 100%;
+    margin-bottom: 150px;
+   
+}
 }
 
 /* ---------------On sale------------------ */
