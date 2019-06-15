@@ -66,24 +66,9 @@ const loginIn = function(){
              </div>`;
              layout += row;
             });
-            console.log(layout);
             document.getElementById('filled').innerHTML = layout;
-        })
+        });
     }
-
-    /* <div class="row">
-<div class="col-md-3">
-    <a href="#"><img src="images/laundary.jpg"></a>
-    <div class="product-bottom text-center">
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star"></i>
-        <i class="fa fa-star-half-o"></i>
-        <h3>Laundary A Inc</h3>
-    </div>
-</div> */
-
 
     function addService(serviceName, serviceLogo, serviceCover, serviceMobile, serviceDetails, serviceCity, serviceCategory, serviceAddressOne) {
         const formDatas = new FormData();
@@ -119,7 +104,6 @@ const loginIn = function(){
             }
         })
         .then((data) => {
-            console.log(data);
         })
         .catch((err) => {
             alert(err);

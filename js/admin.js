@@ -29,7 +29,6 @@ const getUrl = e => {
           navigator.userAgent
         )
       ) {
-        // some code..
         document.getElementById("side-menu").style.display = "none";
       } else {
         document.getElementById("side-menu").style.display = "block";
@@ -47,7 +46,6 @@ const getUrl = e => {
           navigator.userAgent
         )
       ) {
-        // some code..
         document.getElementById("side-menu").style.display = "none";
       } else {
         document.getElementById("side-menu").style.display = "block";
@@ -113,13 +111,9 @@ submit.addEventListener("click", () => {
   const serviceCover = document.getElementById('cover-image').files[0];
   const serviceDetails = document.getElementById('details').value;
   
-  console.log(serviceLogo);
-  console.log(serviceCover);
-  console.log(serviceName);
   loginIn.addService(serviceName,serviceLogo, serviceCover, serviceMobile, serviceDetails, serviceCity, serviceCategory,serviceAddress);
   document.getElementById("service").style.display = "none";
   document.getElementById("admin-categories").style.display = "block";
-  // loginIn.listServices();
 });
 
 
@@ -127,7 +121,6 @@ submit.addEventListener("click", () => {
 // this handle clicks for li
 
 for (var i = 0; i < Flist.length; i++) {
-  console.log(Flist[i]);
   Flist[i].addEventListener("click", getUrl);
 }
 

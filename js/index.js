@@ -21,35 +21,29 @@ const getElementId =(a) => {
     const id= a.id;
     localStorage.setItem('id', id);
     window.location.href='product_details.html';
-    console.log(id);
-}
+};
 
 const getUrl = e => {
   const stationName = e.target.textContent;
 //   console.log(stationName);
   switch (stationName) {
     case "Haulages":  
-      console.log(stationName);
       document.getElementById('fill-category').innerHTML = '';
       DoWork.listServices(stationName);
       break;
     case "Pickup Services":
-      console.log(stationName);
       document.getElementById('fill-category').innerHTML = '';
       DoWork.listServices(stationName);
       break;
     case "Hotel Reservation":
-      console.log(stationName);
       document.getElementById('fill-category').innerHTML = '';
       DoWork.listServices(stationName);
       break;
     case "Door to Door Delivery":
-      console.log(stationName);
       document.getElementById('fill-category').innerHTML = '';
       DoWork.listServices(stationName);
       break;
     case "Artisans":
-      console.log(stationName);
       document.getElementById('fill-category').innerHTML = '';
       document.location.reload(true);
       DoWork.listServices(stationName);
@@ -68,7 +62,6 @@ for (var i = 0; i < Flist.length; i++) {
 
 //get the id of each service
 let getId = (id) => {
-    console.log(id);
     localStorage.setItem('id', id);
     window.location.href = "product_details.html";
 }
@@ -76,7 +69,5 @@ let getId = (id) => {
 var Slist = document.getElementsByClassName("service-click");
 for (var j = 0; j< Slist.length; j++){
     const id = Slist[j].id;
-    console.log(id);
     Slist[j].addEventListener('click', function (){getId(id)});
-    console.log(Slist[j].id);
 }
