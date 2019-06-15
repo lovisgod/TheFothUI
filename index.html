@@ -21,15 +21,15 @@
             <i class="fa fa-bars" id="menu-btn" onclick="openmenu()"></i>
             <i class="fa fa-times" id="close-btn" onclick="closemenu()"></i>
 
-            <h3 id="logo">TheFoth</h3>
+            <h3 id="logo" onclick="reloadPage();">TheFoth</h3>
             <input type="text" class="form-control">
             <span class="input-group-text"><i class="fa fa-search"></i></span>
         </div>
         <div class="menu-bar">
             <ul>
                 <!-- <li><a href="#"><i class="fa fa-home"></i>Home</a></li> -->
-                <li><a href="#">About us</a></li>
-                <li><a href="#">How</a></li>
+                <li><a href="#about-us-section">About us</a></li>
+                <li><a href="#about-us-section">How</a></li>
             </ul>
         </div>
     </div>
@@ -38,9 +38,10 @@
     <div class="side-menu" id="side-menu">
         <ul>
             <li>Haulages<i class="fa fa-angle-right"></i></li>
-            <li>Towing<i class="fa fa-angle-right"></i></li>
-            <li>House Cleaning<i class="fa fa-angle-right"></i></li>
-            <li>Industrial Cleaning<i class="fa fa-angle-right"></i></li>
+            <li>Pickup Services<i class="fa fa-angle-right"></i></li>
+            <li>Hotel Reservation<i class="fa fa-angle-right"></i></li>
+            <li>Door to Door Delivery<i class="fa fa-angle-right"></i></li>
+            <li>Artisans<i class="fa fa-angle-right"></i></li>
         </ul>
     </div>
 
@@ -64,95 +65,28 @@
                 <div class="title">
                     <h2 class="text-center">featured Categories</h2>
                 </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                            <div class="product-bottom text-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <h3>Laundary A Inc</h3>
-                            </div>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                            <div class="product-bottom text-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <h3>Laundary A Inc</h3>
-                            </div>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                            <div class="product-bottom text-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <h3>Laundary A Inc</h3>
-                            </div>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                            <div class="product-bottom text-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <h3>Laundary A Inc</h3>
-                            </div>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                            <div class="product-bottom text-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <h3>Laundary A Inc</h3>
-                            </div>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                            <div class="product-bottom text-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <h3>Laundary A Inc</h3>
-                            </div>
-                    </div>
-                    <div class="col-md-3">
-                            <a href="product_details.html"><img src="images/laundary.jpg"></a>
-                            <div class="product-bottom text-center">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-half-o"></i>
-                                <h3>Laundary A Inc</h3>
-                            </div>
-                    </div>
+                <div class="row" id="fill-category">
+                        <div class="col-md-3">
+                                <a id="69be0d5e-896d-43f9-ab95-0cb7aa09a2e3" href="product_details.html"><img src="https://res.cloudinary.com/thefoth/image/upload/v1560587344/pcdgotwxwnhnqxwyivmr.jpg"></a>
+                                <div class="product-bottom text-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                    <h3>Samson Cleaning</h3>
+                                </div>
+                             </div><div class="col-md-3">
+                                <a id="137c1393-d9c1-43da-96f5-e43420ea7470" href="product_details.html"><img src="https://res.cloudinary.com/thefoth/image/upload/v1560608167/fdjqrnx2dqmp505pbh4t.jpg"></a>
+                                <div class="product-bottom text-center">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-o"></i>
+                                    <h3>Chike Services</h3>
+                                </div>
+                             </div>
                 </div>
             </div>
 
@@ -274,7 +208,7 @@
                 <div class="row">
                     <div class="col-md-3">
                         <div class="product-top">
-                            <img src="images/laundary.jpg">
+                                <a id="7a5c485f-1108-4328-bde6-319d46969e98" href="product_details.html"><img src="https://res.cloudinary.com/thefoth/image/upload/v1560611711/l3j8v2tcfxvsfp57hale.jpg"></a>
                             <div class="overlay-right">
                                 <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye">
                                     </i></button>
@@ -291,7 +225,30 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
+                            <h3>John Luck Services</h3>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="product-top">
+                                <a id="69be0d5e-896d-43f9-ab95-0cb7aa09a2e3" href="product_details.html"><img src="https://res.cloudinary.com/thefoth/image/upload/v1560587344/pcdgotwxwnhnqxwyivmr.jpg"></a>
+                            <div class="overlay-right">
+                                <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye">
+                                    </i></button>
+                                <button type="button" class="btn btn-secondary" title="Add to wissh list"><i
+                                        class="fa fa-heart-o"> </i></button>
+                                <button type="button" class="btn btn-secondary" title="Add to cart"><i
+                                        class="fa fa-shopping-cart "> </i></button>
+                            </div>
+
+                        </div>
+                        <div class="product-bottom text-center">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <h3>>Samson Cleaning</h3>
                         </div>
 
                     </div>
@@ -320,7 +277,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="product-top">
-                            <img src="images/laundary.jpg">
+                                <a id="137c1393-d9c1-43da-96f5-e43420ea7470" href="product_details.html"><img src="https://res.cloudinary.com/thefoth/image/upload/v1560608167/fdjqrnx2dqmp505pbh4t.jpg"></a>
                             <div class="overlay-right">
                                 <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye">
                                     </i></button>
@@ -337,30 +294,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
-                        </div>
-
-                    </div>
-                    <div class="col-md-3">
-                        <div class="product-top">
-                            <img src="images/laundary.jpg">
-                            <div class="overlay-right">
-                                <button type="button" class="btn btn-secondary" title="Quick Shop"><i class="fa fa-eye">
-                                    </i></button>
-                                <button type="button" class="btn btn-secondary" title="Add to wissh list"><i
-                                        class="fa fa-heart-o"> </i></button>
-                                <button type="button" class="btn btn-secondary" title="Add to cart"><i
-                                        class="fa fa-shopping-cart "> </i></button>
-                            </div>
-
-                        </div>
-                        <div class="product-bottom text-center">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star-half-o"></i>
-                            <h3>Laundary A Inc</h3>
+                            <h3>Chike Services</h3>
                         </div>
 
                     </div>
@@ -368,7 +302,7 @@
             </div>
         </section>
         <!------------------------------- Website Features ----------------------------------->
-        <section class="website-features">
+        <section class="website-features" id="about-us-section">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-6 feature-box">
@@ -377,6 +311,11 @@
                         <p id="we-partner">We partner with popular restaurants to give you standard variety with our
                             unique delivery structure. You're just an order away!</p>
                         <button type="button" id="action-button" title="View Services">View Services</button>
+                    </div>
+                    <div class="col-md-6 feature-box">
+                            <h3 id="easy-to-use">About Us</h3>
+                            <h4 id="easy-ordering">Easy Ordering, Easy Service</h4>
+                            <p id="we-partner">The Foth is a startup based in Uyo Nigeria. We are borne with the heart of helping you reduce your stress of finding services arounf you to the bearest minimum</p>
                     </div>
                 </div>
             </div>
@@ -417,6 +356,7 @@
     </section>
 
     <script src="./js/index.js"></script>
+    <script src="./js/fetchIndex.js"></script>
 </body>
 
 </html>

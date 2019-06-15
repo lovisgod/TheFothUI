@@ -22,6 +22,7 @@ body {
   color: orange;
   font-family: "Tangerine";
   font-weight: bold;
+  cursor: pointer;
 }
 .form-control {
   margin-top: 9px;
@@ -281,6 +282,7 @@ body {
 }
 
 .featured-categories img {
+  height: 80%;
   width: 100%;
   padding: 20px 0;
   transition: 1s;
