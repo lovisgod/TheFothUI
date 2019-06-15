@@ -95,21 +95,6 @@ login.addEventListener("click", () => {
   const username = document.getElementById("username-input").value;
   const password = document.getElementById("password-input").value;
   loginIn.handleLogin(username, password);
-        alert('Successfully Logged In');
-        document.querySelector(".login-area").style.display = "none";
-        document.getElementById("service").style.display = "block";
-        document.getElementById("footer-admin").style.display = "block";
-        // this checks if browser is mobile
-        if (
-          /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-            navigator.userAgent
-          )
-        ) {
-          // some code..
-          document.getElementById("side-menu").style.display = "none";
-        } else {
-          document.getElementById("side-menu").style.display = "block";
-        }
 });
 
 
@@ -129,8 +114,10 @@ submit.addEventListener("click", () => {
   console.log(serviceLogo);
   console.log(serviceCover);
   console.log(serviceName);
+  loginIn.addService(serviceName,serviceLogo, serviceCover, serviceMobile, serviceDetails, serviceCity, serviceCategory,serviceAddress);
   document.getElementById("service").style.display = "none";
   document.getElementById("admin-categories").style.display = "block";
+  // loginIn.listServices();
 });
 
 
