@@ -53,7 +53,9 @@ const getUrl = e => {
         document.getElementById("side-menu").style.display = "block";
       }
       document.getElementById("service").style.display = "none";
+
       document.getElementById("admin-categories").style.display = "block";
+      loginIn.listServices();
       break;
     case "Update Service":
       document.querySelector(".login-area").style.display = "none";
