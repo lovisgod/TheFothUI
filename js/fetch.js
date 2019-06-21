@@ -112,9 +112,28 @@ const loginIn = function(){
         });
     }
 
+
+    function listServicesForUpdate(){
+        const listOptions = {
+            method:'GET',
+
+        };
+        fetch('https://thefoth.herokuapp.com/api/v1/services', listOptions)
+        .then((res) => res.json())
+        .then((datas) => {
+            let layout = '';
+            datas.services.forEach(data => {
+                const row = `<option value="${data.id}">${data.name}</option>`;
+             layout += row;
+            });
+            document.getElementById('service-option').innerHTML = layout;
+        });
+    }
+
     return {
         handleLogin : handleLogin,
         addService : addService,
         listServices : listServices, 
+        listServicesForUpdate: listServicesForUpdate
     };
 }();
