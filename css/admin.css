@@ -12,7 +12,7 @@
     position: sticky;
     background: #fff;
     /* margin-bottom: 20px; */
-    border-bottom: 3px solid orange;
+    border-bottom: 3px solid #092950;
     z-index: 2;
   }
   
@@ -20,14 +20,14 @@
     height: 40px;
     margin: 5px 10px;
     font-size: 40px;
-    color: orange;
+    color: #092950;
     font-family: "Tangerine";
     font-weight: bold;
   }
   .form-control {
     margin-top: 9px;
     margin-left: 30px;
-    border: 1px solid orange !important;
+    border: 1px solid #092950 !important;
     border-top-left-radius: 20px !important;
     border-bottom-left-radius: 20px !important;
     border-top-right-radius: 0 !important;
@@ -35,9 +35,9 @@
     box-shadow: none;
   }
   .input-group-text {
-    background: orange !important;
+    background: #092950 !important;
     margin: 8.5px 10px 3px 0 !important;
-    border: 1px solid orange !important;
+    border: 1px solid #092950 !important;
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
     border-top-right-radius: 20px !important;
@@ -67,7 +67,7 @@
     list-style-type: none;
     padding: 15px 35px;
     text-align: center;
-    background-color: orange;
+    background-color: #092950;
     cursor: pointer;
   }
   
@@ -173,7 +173,7 @@
   #close-btn {
     font-size: 30px;
     margin: 10px;
-    color: orange;
+    color: #092950;
     display: none;
   }
   
@@ -286,7 +286,7 @@
   
   /* -------------------product bottom ---------------- */
   .product-bottom .fa {
-    color: orange;
+    color: #092950;
     font-size: 10px;
   }
   .product-bottom h3 {
@@ -373,7 +373,7 @@
     height: 57px;
     top: 0;
     position: sticky;
-    background: orange;
+    background: #092950;
     border-bottom: 3px solid black;
     z-index: 2;
     color: #fff;
@@ -411,7 +411,7 @@
   }
   
   .login-btn {
-    background-color: orange;
+    background-color: #092950;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -472,7 +472,7 @@
 
   #btn-submitService {
     width: 300px;
-    background: orange;
+    background: #092950;
   }
   
   @media only screen and (max-width: 980px) {
@@ -491,7 +491,7 @@
         }
         #btn-submitService {
           width: 100px;
-          background: orange;
+          background: #092950;
         }
     }
 

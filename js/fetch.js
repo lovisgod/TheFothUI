@@ -12,7 +12,7 @@ const loginIn = function(){
             method: 'POST',
             body: formData,
         };
-        fetch('http://127.0.0.1:3500/api/v1/thefoth-admin', options)
+        fetch('https://thefoth.herokuapp.com/api/v1/thefoth-admin', options)
         .then((res) => {
             if (res.ok){
                 alert('Successfully Logged In');
@@ -37,8 +37,10 @@ const loginIn = function(){
             }
             
         })
-        .then((data)=> {console.log(data)
-            localStorage.setItem('token','Bearer ' + data.token)})
+        .then((data)=> {
+
+            localStorage.setItem('token','Bearer ' + data.token)
+        })
         .catch((err) => console.log(err));
     }
 
@@ -47,7 +49,7 @@ const loginIn = function(){
             method:'GET',
 
         };
-        fetch('http://127.0.0.1:3500/api/v1/services', listOptions)
+        fetch('https://thefoth.herokuapp.com/api/v1/services', listOptions)
         .then((res) => res.json())
         .then((datas) => {
             console.log(datas);
@@ -92,7 +94,7 @@ const loginIn = function(){
             body: formDatas,
         };
 
-        fetch('http://127.0.0.1:3500/api/v1/thefoth-admin/create', postOptions)
+        fetch('https://thefoth.herokuapp.com/api/v1/thefoth-admin/create', postOptions)
         .then((res) => {
             if(res.ok){
                 alert('Service Created Successfully');
@@ -110,9 +112,28 @@ const loginIn = function(){
         });
     }
 
+
+    function listServicesForUpdate(){
+        const listOptions = {
+            method:'GET',
+
+        };
+        fetch('https://thefoth.herokuapp.com/api/v1/services', listOptions)
+        .then((res) => res.json())
+        .then((datas) => {
+            let layout = '';
+            datas.services.forEach(data => {
+                const row = `<option value="${data.id}">${data.name}</option>`;
+             layout += row;
+            });
+            document.getElementById('service-option').innerHTML = layout;
+        });
+    }
+
     return {
         handleLogin : handleLogin,
         addService : addService,
         listServices : listServices, 
+        listServicesForUpdate: listServicesForUpdate
     };
 }();

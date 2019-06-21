@@ -1,8 +1,14 @@
 document.getElementById("service").style.display = "none";
+document.getElementById("service-option-option").style.display = "none";
 document.getElementById("footer-admin").style.display = "none";
 document.getElementById("side-menu").style.display = "none";
 document.getElementById("admin-categories").style.display = "none";
 var Flist = document.getElementsByTagName("li");
+const serviceOption = document.getElementById("service-option");
+// let selectedService = serviceOption.value;
+loginIn.listServicesForUpdate();
+// let selectedService = serviceOption.options[serviceOption.selectedIndex];
+// console.log(selectedService)
 
 const openmenu = () => {
   document.getElementById("side-menu").style.display = "block";
@@ -16,8 +22,7 @@ const closemenu = () => {
   document.getElementById("close-btn").style.display = "none";
 };
 
-
-//handle admin side menu 
+//handle admin side menu
 const getUrl = e => {
   var stationName = e.target.textContent;
   switch (stationName) {
@@ -68,11 +73,14 @@ const getUrl = e => {
       } else {
         document.getElementById("side-menu").style.display = "block";
       }
+      console.log(serviceOption.value);
+      document.getElementById("service-option-option").style.display = "block";
       document.getElementById("service").style.display = "block";
       document.getElementById("admin-categories").style.display = "none";
       document.getElementById("add-serviceTitle").innerHTML = "Update Serivice";
       break;
     case "Log Out":
+      document.getElementById("service-option-option").style.display = "none";
       document.querySelector(".login-area").style.display = "block";
       document.getElementById("service").style.display = "none";
       document.getElementById("admin-categories").style.display = "none";
@@ -87,8 +95,6 @@ const getUrl = e => {
   }
 };
 
-
-
 // login method
 const login = document.querySelector("#login-btn");
 login.addEventListener("click", () => {
@@ -97,26 +103,31 @@ login.addEventListener("click", () => {
   loginIn.handleLogin(username, password);
 });
 
-
-
-// Add service here 
+// Add service here
 const submit = document.querySelector("#btn-submitService");
 submit.addEventListener("click", () => {
-  const serviceName =document.getElementById('sname').value;
-  const serviceMobile = document.getElementById('phone').value;
-  const serviceAddress = document.getElementById('address').value;
-  const serviceCity = document.getElementById('city').value;
-  const serviceCategory = document.getElementById('category').value;
-  const serviceLogo = document.getElementById('logo-image').files[0];
-  const serviceCover = document.getElementById('cover-image').files[0];
-  const serviceDetails = document.getElementById('details').value;
-  
-  loginIn.addService(serviceName,serviceLogo, serviceCover, serviceMobile, serviceDetails, serviceCity, serviceCategory,serviceAddress);
+  const serviceName = document.getElementById("sname").value;
+  const serviceMobile = document.getElementById("phone").value;
+  const serviceAddress = document.getElementById("address").value;
+  const serviceCity = document.getElementById("city").value;
+  const serviceCategory = document.getElementById("category").value;
+  const serviceLogo = document.getElementById("logo-image").files[0];
+  const serviceCover = document.getElementById("cover-image").files[0];
+  const serviceDetails = document.getElementById("details").value;
+
+  loginIn.addService(
+    serviceName,
+    serviceLogo,
+    serviceCover,
+    serviceMobile,
+    serviceDetails,
+    serviceCity,
+    serviceCategory,
+    serviceAddress
+  );
   document.getElementById("service").style.display = "none";
   document.getElementById("admin-categories").style.display = "block";
 });
-
-
 
 // this handle clicks for li
 
@@ -150,3 +161,15 @@ function readURLTwo(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
+
+// handle update fields update
+ const updateServiceForm = () => {
+  const serviceName = document.getElementById("sname").value;
+  const serviceMobile = document.getElementById("phone").value;
+  const serviceAddress = document.getElementById("address").value;
+  const serviceCity = document.getElementById("city").value;
+  const serviceCategory = document.getElementById("category").value;
+  const serviceLogo = document.getElementById("logo-image").files[0];
+  const serviceCover = document.getElementById("cover-image").files[0];
+  const serviceDetails = document.getElementById("details").value;
+ }

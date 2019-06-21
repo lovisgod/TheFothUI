@@ -9,7 +9,7 @@ const GetService = function(){
             method:'GET',
 
         };
-        fetch(`http://127.0.0.1:3500/api/v1/services/single?id=${id}`, listOptions)
+        fetch(`https://thefoth.herokuapp.com/api/v1/services/single?id=${id}`, listOptions)
         .then((res) => res.json())
         .then((datas) => {
             category = datas.service.category;
