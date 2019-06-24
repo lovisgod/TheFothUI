@@ -130,10 +130,31 @@ const loginIn = function(){
         });
     }
 
+    // handle update fields update
+ function updateServiceForm(id){
+    const listOptions = {
+        method:'GET',
+
+    };
+    fetch(`https://thefoth.herokuapp.com/api/v1/services/single?id=${id}`, listOptions)
+    .then((res) => res.json())
+    .then((datas) => {
+        document.getElementById("sname").value = datas.service.name;
+        document.getElementById("phone").value = datas.service.mobile;
+        document.getElementById("address").value = datas.service.address;
+        document.getElementById("city").value= datas.service.city;
+        document.getElementById("category").value = datas.service.category;
+        document.getElementById("blah").src= datas.service.logo;
+        document.getElementById("blah2").src = datas.service.cover;
+        document.getElementById("details").value = datas.service.details;   
+    });
+   }
+
     return {
         handleLogin : handleLogin,
         addService : addService,
         listServices : listServices, 
-        listServicesForUpdate: listServicesForUpdate
+        listServicesForUpdate: listServicesForUpdate,
+        updateServiceForm: updateServiceForm
     };
 }();

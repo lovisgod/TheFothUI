@@ -499,3 +499,22 @@
     width: 150px !important;
     height: 200px !important;
   }
+
+  /* ----------------------------------- Service option check ------------------------ */
+
+  .service-option{
+    float: right;
+    position: absolute;
+    top: 180px;
+    right:200px;
+  }
+
+  .service-area-option{
+      height: 50px;
+      margin-bottom: 30px;
+      width: 300px;
+      background: transparent;
+      border: 2px #092950 solid ;
+      border-radius: 5px;
+      text-align: center;
+  }
