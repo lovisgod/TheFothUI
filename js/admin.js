@@ -74,6 +74,7 @@ const getUrl = e => {
         document.getElementById("side-menu").style.display = "block";
       }
       console.log(serviceOption.value);
+      loginIn.updateServiceForm(serviceOption.value);
       document.getElementById("service-option-option").style.display = "block";
       document.getElementById("service").style.display = "block";
       document.getElementById("admin-categories").style.display = "none";
@@ -162,14 +163,4 @@ function readURLTwo(input) {
   }
 }
 
-// handle update fields update
- const updateServiceForm = () => {
-  const serviceName = document.getElementById("sname").value;
-  const serviceMobile = document.getElementById("phone").value;
-  const serviceAddress = document.getElementById("address").value;
-  const serviceCity = document.getElementById("city").value;
-  const serviceCategory = document.getElementById("category").value;
-  const serviceLogo = document.getElementById("logo-image").files[0];
-  const serviceCover = document.getElementById("cover-image").files[0];
-  const serviceDetails = document.getElementById("details").value;
- }
+
