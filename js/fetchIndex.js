@@ -14,7 +14,7 @@ const DoWork = function(){
             let layout = '';
             datas.services.forEach(data => {
                 const row = `<div class="col-md-3">
-                <a id="${data.id}" class="service-click" onclick="getElementId(this);"><img src="${data.logo}"></a>
+                <a id="${data.id}" class="service-click" onclick="getElementId(this);"><img src="${data.cover}"></a>
                 <div class="product-bottom text-center">
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>

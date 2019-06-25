@@ -99,7 +99,7 @@ const getUrl = e => {
         document.getElementById("side-menu").style.display = "block";
       }
       document.getElementById("fill-category").innerHTML = "";
-      document.location.reload(true);
+      // document.location.reload(true);
       DoWork.listServices(stationName);
       break;
     default:
