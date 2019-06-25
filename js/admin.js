@@ -27,6 +27,7 @@ const getUrl = e => {
   var stationName = e.target.textContent;
   switch (stationName) {
     case "Add Service":
+        document.getElementById("service-option-option").style.display = "none";
       document.querySelector(".login-area").style.display = "none";
       // this checks if browser is mobile
       if (
@@ -44,6 +45,7 @@ const getUrl = e => {
         "ADMIN ADD SERVICE";
       break;
     case "Service":
+        document.getElementById("service-option-option").style.display = "none";
       document.querySelector(".login-area").style.display = "none";
       // this checks if browser is mobile
       if (
@@ -79,6 +81,7 @@ const getUrl = e => {
       document.getElementById("service").style.display = "block";
       document.getElementById("admin-categories").style.display = "none";
       document.getElementById("add-serviceTitle").innerHTML = "Update Serivice";
+      document.getElementById("btn-submitService").value= "Update";
       break;
     case "Log Out":
       document.getElementById("service-option-option").style.display = "none";
@@ -89,6 +92,7 @@ const getUrl = e => {
       document.getElementById("side-menu").style.display = "none";
       break;
     default:
+      document.getElementById("service-option-option").style.display = "none";
       document.querySelector(".login-area").style.display = "block";
       document.getElementById("footer-admin").style.display = "none";
       document.getElementById("side-menu").style.display = "none";
@@ -106,29 +110,66 @@ login.addEventListener("click", () => {
 
 // Add service here
 const submit = document.querySelector("#btn-submitService");
-submit.addEventListener("click", () => {
-  const serviceName = document.getElementById("sname").value;
-  const serviceMobile = document.getElementById("phone").value;
-  const serviceAddress = document.getElementById("address").value;
-  const serviceCity = document.getElementById("city").value;
-  const serviceCategory = document.getElementById("category").value;
-  const serviceLogo = document.getElementById("logo-image").files[0];
-  const serviceCover = document.getElementById("cover-image").files[0];
-  const serviceDetails = document.getElementById("details").value;
+submit.addEventListener('click', () => {
+  document.getElementById("service-option-option").style.display = "none";
+  const id = serviceOption.value;
+  if (submit.value != 'Update'){
+  
+      const serviceName = document.getElementById("sname").value;
+      const serviceMobile = document.getElementById("phone").value;
+      const serviceAddress = document.getElementById("address").value;
+      const serviceCity = document.getElementById("city").value;
+      const serviceCategory = document.getElementById("category").value;
+      const serviceLogo = document.getElementById("logo-image").files[0];
+      const serviceCover = document.getElementById("cover-image").files[0];
+      const serviceDetails = document.getElementById("details").value;
+    
+      loginIn.addService(
+        serviceName,
+        serviceLogo,
+        serviceCover,
+        serviceMobile,
+        serviceDetails,
+        serviceCity,
+        serviceCategory,
+        serviceAddress
+      );
+      document.getElementById("service").style.display = "none";
+      document.getElementById("admin-categories").style.display = "block";
+    ;
+  } else{
+    document.getElementById("service").style.display = "none";
+    document.getElementById("admin-categories").style.display = "block";
+    if (document.getElementById("logo-image").files[0] == null){
+      const serviceName = document.getElementById("sname").value;
+      const serviceMobile = document.getElementById("phone").value;
+      const serviceAddress = document.getElementById("address").value;
+      const serviceCity = document.getElementById("city").value;
+      const serviceCategory = document.getElementById("category").value;
+      const serviceDetails = document.getElementById("details").value;
+      update.updateServicewithnoimage(serviceName, serviceMobile, serviceDetails, serviceCity,serviceCategory, serviceAddress,id);
+    }else {
+      const serviceName = document.getElementById("sname").value;
+      const serviceMobile = document.getElementById("phone").value;
+      const serviceAddress = document.getElementById("address").value;
+      const serviceCity = document.getElementById("city").value;
+      const serviceCategory = document.getElementById("category").value;
+      const serviceLogo = document.getElementById("logo-image").files[0];
+      const serviceCover = document.getElementById("cover-image").files[0];
+      const serviceDetails = document.getElementById("details").value;
+      update.updateServicewithimage(serviceName,serviceLogo,serviceCover,serviceMobile,serviceDetails,serviceCity,serviceCategory, serviceAddress, id);
+    }
+  }
+})
 
-  loginIn.addService(
-    serviceName,
-    serviceLogo,
-    serviceCover,
-    serviceMobile,
-    serviceDetails,
-    serviceCity,
-    serviceCategory,
-    serviceAddress
-  );
-  document.getElementById("service").style.display = "none";
-  document.getElementById("admin-categories").style.display = "block";
-});
+
+
+
+
+
+
+
+
 
 // this handle clicks for li
 
