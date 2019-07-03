@@ -123,10 +123,23 @@ const loginIn = function(){
         .then((datas) => {
             let layout = '';
             datas.services.forEach(data => {
-                const row = `<option value="${data.id}">${data.name}</option>`;
+                const row = `<tr id="service-table">
+                <td id="${data.id}">${data.name}</td>
+                <td>
+                  <a data-toggle="modal" class="text-warning mr-2" id="">
+                    <i class="fa fa-edit" id="${data.id}" onclick="updateService(this.id)" style="cursor: pointer"></i>
+                  </a>
+                </td>
+
+                <td>
+                  <div class="text-danger mr-2">
+                    <i class="fa fa-trash" id="${data.id}" onclick="deleteUtility(this.id)"style="cursor: pointer"></i>
+                  </div>
+                </td>
+              </tr>`;
              layout += row;
             });
-            document.getElementById('service-option').innerHTML = layout;
+            document.getElementById('service-edit-table').innerHTML = layout;
         });
     }
 

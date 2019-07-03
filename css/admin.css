@@ -5,6 +5,7 @@
   body {
     background: #ffffff;
     font-family: sans-serif;
+    overflow-x: hidden;
   }
   .top-nav-bar {
     height: 57px;
@@ -517,4 +518,29 @@
       border: 2px #092950 solid ;
       border-radius: 5px;
       text-align: center;
+  }
+
+
+  /* -------------------------------Edit Service new ------------------------ */
+
+  .col-md-8{
+    margin-left: 17%;
+  }
+
+  #edit_services{
+    margin-top: 50px;
+    margin-bottom: 300px;
+  }
+
+  .fa{
+    width: 50px;
+    height: 50px;
+    color: #092950;
+  }
+
+  @media only screen and (max-width: 980px) {
+    .col-md-8{
+      width: 100%;
+      margin: 0 0 0 0 !important;
+    }
   }

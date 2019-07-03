@@ -39,7 +39,7 @@
         <ul>
             <li>Add Service</li>
             <li>Service</li>
-            <li>Update Service</li>
+            <li>Edit Service</li>
             <li>Log Out</li>
         </ul>
     </div>
@@ -134,6 +134,54 @@
         </div>
     </section>
 
+
+    <!----------------------------------------------- Edit Business ------------------------------------------>
+
+
+    <div class="row mt-6" id="edit_services">
+
+        <div class="col-md-8">
+          <div class="card o-hidden mb-4">
+            <div class="card-header d-flex align-items-center">
+              <h3 class="w-50 float-left card-title m-0">Edit Services</h3>
+            </div>
+  
+            <div class="card-body">
+  
+              <div class="table-responsive">
+  
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th scope="col">Name</th>
+                      <th scope="col">Edit</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody id="service-edit-table">
+                    <tr id="service-table">
+                      <td id="name_of_service">Name Of Service</td>
+                      <td>
+                        <a data-toggle="modal" class="text-warning mr-2" id="">
+                          <i class="fa fa-edit" id="" onclick="updateService()" style="cursor: pointer"></i>
+                        </a>
+                      </td>
+  
+                      <td>
+                        <div class="text-danger mr-2">
+                          <i class="fa fa-trash" id="" onclick="deleteUtility()"style="cursor: pointer"></i>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     <section class="service-option" id="service-option-option">
         <h4>Choose a service to Edit</h4>
         <select class="service-area-option" id="service-option">
@@ -170,4 +218,5 @@
 <script src="./js//fetch.js"></script>
 <script src="./js/admin.js"></script>
 <script src="./js/updateservice.js"></script>
+<script src="./js/adminedit.js"></script>
 </html>
