@@ -112,8 +112,41 @@ const update = function(){
     }
 
 
+
+    // delete service is handled in this function
+
+    function deleteService(id) {
+        const token = localStorage.getItem('token');
+
+        const postOptions = {
+            method: 'DELETE',
+            headers: new Headers({
+                'X-My-Custom-Header': 'value-v',
+                'Authorization': token,
+        })
+        };
+
+        fetch(`https://thefoth.herokuapp.com/api/v1/services/delete-service?id=${id}`, postOptions)
+        .then((res) => {
+            if(res.ok){
+                loginIn.listServicesForUpdate();
+                return res.json();
+            } else {
+                alert('Service Could not be deleted');
+                window.stop();
+            }
+        })
+        .then((data) => {
+        })
+        .catch((err) => {
+            alert(err);
+        });
+    }
+
+
     return {
         updateServicewithimage: updateServicewithimage,
-        updateServicewithnoimage:updateServicewithnoimage
+        updateServicewithnoimage:updateServicewithnoimage,
+        deleteService: deleteService
     };
 }();

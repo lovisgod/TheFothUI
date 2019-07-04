@@ -68,3 +68,31 @@ submit.addEventListener('click', () => {
     }
   }
 })
+
+function deleteUtility(service_id) {
+    const deleteid = service_id;
+    console.log(service_id);
+
+    //here we use sweet alert to habdle dialog
+    swal({
+        title: "Are you sure?",
+        text: "Once deleted, you will not be able to recover this service details!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+        update.deleteService(deleteid);
+          swal("Poof! Service has been deleted!", {
+            icon: "success",
+          });
+        } else {
+          swal("Your imaginary file is safe!", {
+              icon: "info"
+          });
+        }
+      });
+         
+       
+}
