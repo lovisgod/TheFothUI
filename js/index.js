@@ -111,16 +111,28 @@ for (var i = 0; i < Flist.length; i++) {
   Flist[i].addEventListener("click", getUrl);
 }
 
-//get the id of each service
+//get the id of each service and navigate to the product details page
 let getId = id => {
   localStorage.setItem("id", id);
   window.location.href = "product_details.html";
 };
 
+
+// handle click of each products
 var Slist = document.getElementsByClassName("service-click");
 for (var j = 0; j < Slist.length; j++) {
   const id = Slist[j].id;
   Slist[j].addEventListener("click", function() {
+    getId(id);
+  });
+}
+
+
+// handle click of each slides
+var slist = document.getElementsByClassName("service-slide");
+for (var j = 0; j < slist.length; j++) {
+  const id = slist[j].id;
+  slist[j].addEventListener("click", function() {
     getId(id);
   });
 }
