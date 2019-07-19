@@ -117,7 +117,6 @@ let getId = id => {
   window.location.href = "product_details.html";
 };
 
-
 // handle click of each products
 var Slist = document.getElementsByClassName("service-click");
 for (var j = 0; j < Slist.length; j++) {
@@ -126,7 +125,6 @@ for (var j = 0; j < Slist.length; j++) {
     getId(id);
   });
 }
-
 
 // handle click of each slides
 var slist = document.getElementsByClassName("service-slide");
