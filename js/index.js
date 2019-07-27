@@ -134,3 +134,12 @@ for (var j = 0; j < slist.length; j++) {
     getId(id);
   });
 }
+
+
+var search_input = document.getElementById('search-field');
+var search_button = document.getElementById('search-button');
+
+search_button.addEventListener('click', function() {
+  document.getElementById("fill-category").innerHTML = "";
+  DoWork.listRandomServices(search_input.value);
+})
