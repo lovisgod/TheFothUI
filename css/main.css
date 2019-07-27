@@ -23,6 +23,7 @@ body {
   font-family: "Tangerine";
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none !important;
 }
 .form-control {
   margin-top: 9px;
